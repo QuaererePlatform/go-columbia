@@ -1,0 +1,16 @@
+---
+version: "3.7"
+services:
+  columbia-api:
+    build:
+      context: .
+      dockerfile: ./build/docker/dev/Dockerfile
+    working_dir: /webapp
+    environment:
+      air_wd: /webapp
+      COLUMBIA_APP_ENV: ${COLUMBIA_APP_ENV-development}
+    ports:
+      - 8080:1323
+    volumes:
+    - ./:/webapp
+    command: ["-c", "./.air.conf"]
