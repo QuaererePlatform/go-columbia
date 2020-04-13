@@ -1,13 +1,13 @@
 package server
 
-import "github.com/QuaerereProject/go-columbia/internal/validator"
+import "github.com/QuaererePlatform/go-columbia/internal/validator"
 
 type (
 	Config struct {
-		AppEnv    *string  `mapstructure:"app_env"`
-		Bind      string `mapstructure:"bind"`
-		DebugMode bool `mapstructure:"debug_mode"`
-		Port *int `mapstructure:"port"`
+		AppEnv    *string `mapstructure:"app_env"`
+		Bind      string  `mapstructure:"bind"`
+		DebugMode bool    `mapstructure:"debug_mode"`
+		Port      *int    `mapstructure:"port"`
 	}
 )
 

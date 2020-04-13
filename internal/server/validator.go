@@ -1,8 +1,8 @@
 package server
 
-import "github.com/QuaerereProject/go-columbia/internal/validator"
+import "github.com/QuaererePlatform/go-columbia/internal/validator"
 
-type customValidator struct {}
+type customValidator struct{}
 
 // Validate wraps the Validate command so that it meets Echo's validator
 func (cv *customValidator) Validate(i interface{}) error {

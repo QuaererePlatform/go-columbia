@@ -10,13 +10,13 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/QuaerereProject/go-columbia/internal/server"
+	"github.com/QuaererePlatform/go-columbia/internal/server"
 )
 
 var serveCmd = &cobra.Command{
-	Use: "serve",
+	Use:   "serve",
 	Short: "Start",
-	Run: serve,
+	Run:   serve,
 }
 
 func serve(cmd *cobra.Command, args []string) {
@@ -31,7 +31,7 @@ func serve(cmd *cobra.Command, args []string) {
 		log.Fatal(err)
 	}
 
-	go func() { log.Fatal(s.Start())}()
+	go func() { log.Fatal(s.Start()) }()
 
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, os.Interrupt)

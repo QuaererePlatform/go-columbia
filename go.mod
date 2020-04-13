@@ -1,4 +1,4 @@
-module github.com/QuaerereProject/go-columbia
+module github.com/QuaererePlatform/go-columbia
 
 go 1.13
 
